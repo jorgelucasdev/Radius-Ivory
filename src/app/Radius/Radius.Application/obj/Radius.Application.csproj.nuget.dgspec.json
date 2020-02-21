@@ -1,0 +1,390 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj",
+        "projectName": "Radius.Application",
+        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj",
+        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/orchardcore-preview/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
+              },
+              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {
+                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj"
+              },
+              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj": {
+                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.9.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
+        "projectName": "Radius.Data",
+        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
+        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/orchardcore-preview/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
+        "projectName": "Radius.Domain",
+        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
+        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/orchardcore-preview/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj",
+        "projectName": "Radius.Infra.CrossCutting.Bus",
+        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj",
+        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/orchardcore-preview/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
+        "projectName": "Radius.Infra.CrossCutting.IoC",
+        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
+        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/orchardcore-preview/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj",
+        "projectName": "Radius.Service",
+        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj",
+        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://www.myget.org/F/orchardcore-preview/api/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
+                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj"
+              },
+              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
+              },
+              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj": {
+                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.0-preview1, )"
+            },
+            "Flunt.Br": {
+              "target": "Package",
+              "version": "[1.3.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
