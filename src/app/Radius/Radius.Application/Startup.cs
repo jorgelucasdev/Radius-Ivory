@@ -56,8 +56,8 @@ namespace Radius.Application
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json",
-                    "Radius");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Radius");
+                c.RoutePrefix = "docs";
             });
         }
     }
