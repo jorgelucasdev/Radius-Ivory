@@ -1,35 +1,35 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using Radius.Application.Interfaces;
+using Radius.Application.ViewModels;
 
 namespace Radius.Application.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class BaseController : Controller
     {
-        [Route("Get")]
-        [HttpGet]
-        public IActionResult Get()
+        private readonly IServicoFaleConosco _servicoFaleConosco;
+        public BaseController(
+            IServicoFaleConosco servicoFaleConosco)
         {
-            return Json(string.Format("Format"));
+            _servicoFaleConosco = servicoFaleConosco;
+        }
+
+        [Route("GetAll")]
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var lista = _servicoFaleConosco.ListarTodos();
+            return Json(lista);
         }
 
         [Route("Post")]
         [HttpPost]
-        public IActionResult Post(string data)
+        public IActionResult Post(FaleConoscoDTO dTO)
         {
-            return Json(string.Format("Format: {0}", data));
-        }
-
-        [Route("Put")]
-        [HttpPut]
-        public IActionResult Put(string data)
-        {
-            return Json(string.Format("Format: {0}", data));
-        }
-
-        [Route("Delete")]
-        [HttpDelete]
-        public IActionResult Delete(bool deletar)
-        {
-            return Json(string.Format("Format: {0}", deletar));
+            var result = _servicoFaleConosco.Adicionar(dTO);
+            return Json(string.Format("Format: {0}", result));
         }
     }
 }

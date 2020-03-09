@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Radius.Data\Radius.Data.csproj" />
+    <ProjectReference Include="..\Radius.Domain\Radius.Domain.csproj" />
+    <ProjectReference Include="..\Radius.Service\Radius.Service.csproj" />
+  </ItemGroup>
+
 </Project>

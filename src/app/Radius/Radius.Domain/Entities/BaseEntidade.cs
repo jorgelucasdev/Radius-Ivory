@@ -1,28 +1,33 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Text;
 
 namespace Radius.Domain.Entities
 {
     public abstract class BaseEntidade
     {
         [Key]
-        public Guid Id { get; set; }
-        private DateTime? _dataCriacao;
-
-        public DateTime? DataCriacao
+        public Guid Id
         {
-            get { return _dataCriacao; }
-            set { _dataCriacao = (value == null ? DateTime.UtcNow : value); }
+            get; private set;
         }
 
-        public DateTime? UpdateAt { get; set; }
+        public DateTime DataCriacao
+        {
+            get; private set;
+        }
 
-        public bool eAtivo { get; set; }
+        public DateTime? DataAtualizacao
+        {
+            get; private set;
+        }
 
-        public void Deletar() { this.eAtivo = false; }
-        public void Ativar() { this.eAtivo = true; }
+        public bool EstaAtivo
+        {
+            get; private set;
+        }
+
+        public void Deletar() { this.EstaAtivo = false; }
+        public void Ativar() { this.EstaAtivo = true; }
         public void GerarId() { this.Id = Guid.NewGuid(); }
         public void PrepararParaInserir()
         {
@@ -34,9 +39,11 @@ namespace Radius.Domain.Entities
         {
             this.DataCriacao = DateTime.UtcNow;
         }
-        public void ConfigureUpdateAt()
+        public void PrepararParaAtualizar()
         {
-            this.UpdateAt = DateTime.UtcNow;
+            this.DataAtualizacao = DateTime.UtcNow;
         }
+
+        public abstract bool Validar();
     }
 }

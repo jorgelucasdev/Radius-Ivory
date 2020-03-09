@@ -5,9 +5,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="AutoMappers\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Validations\" />
+    <Compile Remove="Validations\**" />
+    <EmbeddedResource Remove="Validations\**" />
+    <None Remove="Validations\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

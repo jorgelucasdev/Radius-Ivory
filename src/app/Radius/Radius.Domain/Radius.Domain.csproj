@@ -5,9 +5,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Interfaces\Services\**" />
+    <EmbeddedResource Remove="Interfaces\Services\**" />
+    <None Remove="Interfaces\Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Entities\" />
-    <Folder Include="Interfaces\Services\" />
     <Folder Include="Interfaces\Repositories\" />
+    <Folder Include="Validations\" />
   </ItemGroup>
 
 </Project>
