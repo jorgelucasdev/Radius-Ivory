@@ -16,4 +16,8 @@
     <Folder Include="Validations\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Flunt" Version="1.0.4" />
+  </ItemGroup>
+
 </Project>

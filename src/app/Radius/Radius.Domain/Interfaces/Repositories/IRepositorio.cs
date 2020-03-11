@@ -11,6 +11,8 @@ namespace Radius.Domain.Interfaces.Repositories
         #region Leitura
         Task<List<T>> BuscarTodosComCondicao(Expression<Func<T, bool>> expression);
         Task<T> BuscarComCondicao(Expression<Func<T, bool>> expression);
+
+        Task<List<T>> BuscarTodos();
         #endregion
 
         #region Escrita

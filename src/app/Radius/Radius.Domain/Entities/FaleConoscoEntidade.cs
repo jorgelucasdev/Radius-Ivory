@@ -1,4 +1,7 @@
-﻿namespace Radius.Domain.Entities
+﻿using Flunt.Notifications;
+using Flunt.Validations;
+
+namespace Radius.Domain.Entities
 {
     public class FaleConoscoEntidade : BaseEntidade
     {
@@ -52,9 +55,16 @@
             this.Mensagem = mensagem;
         }
 
-        public override bool Validar()
+        public override void Validate()
         {
-            return true;
+            AddNotifications(
+                     new Contract()
+                    .IsNotNullOrEmpty(Mensagem, "Corpo", "O corpo da mensagem é obrigatório.")
+                    .IsNotNullOrEmpty(Assunto, "Assunto", "O assunto da mensagem e obrigatório")
+                    .IsNotNullOrEmpty(Email, "Email", "O email do usuario é obrigatório.")
+                    .IsNotNullOrEmpty(Nome, "Nome", "O nome do usuario e obrigatório")
+
+            );
         }
     }
 }
