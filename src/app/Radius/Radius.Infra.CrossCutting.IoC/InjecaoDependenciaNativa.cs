@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Radius.Application.Interfaces;
 using Radius.Application.Services;
+using Radius.CrossCutting.Identity.Abastraction;
+using Radius.CrossCutting.Identity.Repository;
 using Radius.Data.Context;
 using Radius.Data.Repository;
 using Radius.Data.UoW;
@@ -22,6 +24,10 @@ namespace Radius.Infra.CrossCutting.IoC
 
             //Servicos
             services.AddScoped<IServicoFaleConosco, ServicoFaleConosco>();
+
+            // Identity
+            services.AddScoped<IUserIdentity, RepositorioUserIdentity>();
+
         }
     }
 }

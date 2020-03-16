@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Radius.CrossCutting.Identity.DbContext;
 using Radius.Data.Context;
 using System;
 
-namespace Radius.Application.Extensions
+namespace Radius.Application.Configurations
 {
     public static class DatabaseSetup
     {
@@ -12,10 +13,11 @@ namespace Radius.Application.Extensions
         {
             if (services == null) throw new ArgumentNullException(nameof(services));
 
-            //services.AddDbContext<RadiusContext>(options =>
-            //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-            
-            services.AddDbContext<RadiusContext>(opt => opt.UseInMemoryDatabase(databaseName: "RadiusDb"));
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseInMemoryDatabase(configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<RadiusContext>(options =>
+                options.UseInMemoryDatabase(configuration.GetConnectionString("DefaultConnection")));
         }
     }
 }
