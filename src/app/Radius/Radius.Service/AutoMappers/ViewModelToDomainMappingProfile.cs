@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using Radius.Application.ViewModels;
 using Radius.Domain.Entities;
+using Radius.Service.DTOs;
 
 namespace Radius.Service.AutoMappers
 {
@@ -8,7 +8,7 @@ namespace Radius.Service.AutoMappers
     {
         public ViewModelToDomainMappingProfile()
         {
-            CreateMap<FaleConoscoDTO, FaleConoscoEntidade>();
+            CreateMap<FaleConoscoDTOCriacao, FaleConoscoEntidade>();
         }
     }
 }

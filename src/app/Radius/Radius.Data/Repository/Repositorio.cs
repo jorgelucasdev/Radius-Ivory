@@ -29,13 +29,19 @@ namespace Radius.Data.Repository
         {
             return await _dbSet.AsNoTracking().Where(expression).ToListAsync();
         }
+
+        public virtual async Task<List<T>> BuscarTodos()
+        {
+            return await _dbSet.AsNoTracking().ToListAsync();
+        }
         #endregion
 
         #region Escrita
         public async Task<T> Adicionar(T obj)
         {
             obj.PrepararParaInserir();
-            if (obj.Validar())
+            obj.Validate();
+            if (obj.Invalid)
             {
                 var result = await _dbSet.AddAsync(obj);
                 await Comitar();
@@ -50,7 +56,8 @@ namespace Radius.Data.Repository
         public async Task<T> Atualizar(T obj)
         {
             obj.PrepararParaAtualizar();
-            if (obj.Validar())
+            obj.Validate();
+            if (obj.Invalid)
             {
                 var result = _dbSet.Update(obj);
                 await Comitar();
@@ -64,9 +71,14 @@ namespace Radius.Data.Repository
         }
         public async Task<bool> Deletar(Guid Id)
         {
-            var obj = await BuscarComCondicao(x => x.Id.Equals(Id));
-            obj.Deletar();
-            return await Comitar();
+            bool resultado = false;
+            if (BaseEntidade.VerificaGuidValido(Id))
+            {
+                var obj = await BuscarComCondicao(x => x.Id.Equals(Id));
+                obj.Deletar();
+                resultado = await Comitar();
+            }
+            return resultado;
         }
         #endregion
 
