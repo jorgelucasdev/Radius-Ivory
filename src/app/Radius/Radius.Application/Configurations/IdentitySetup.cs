@@ -23,7 +23,6 @@ namespace Radius.Application.Configurations
                 .AddDefaultTokenProviders();
 
             // JWT Setup
-
             var appSettingsSection = configuration.GetSection("AppSettings");
             services.Configure<AppSettings>(appSettingsSection);
 
@@ -36,16 +35,16 @@ namespace Radius.Application.Configurations
                 x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             }).AddJwtBearer(x =>
             {
-                x.RequireHttpsMetadata = true;
+                x.RequireHttpsMetadata = false;
                 x.SaveToken = true;
                 x.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidAudience = appSettings.ValidAt,
-                    ValidIssuer = appSettings.Issuer
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                    //ValidAudience = appSettings.ValidAt,
+                    //ValidIssuer = appSettings.Issuer
                 };
             });
 
@@ -63,8 +62,8 @@ namespace Radius.Application.Configurations
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("PodeGravarLogin", policy => policy.Requirements.Add(new ClaimRequirement("Login", "Gravar")));
-                options.AddPolicy("PodeRemoverLogin", policy => policy.Requirements.Add(new ClaimRequirement("Login", "Remover")));
+                options.AddPolicy("Gravar", policy => policy.Requirements.Add(new ClaimRequirement("Login", "Gravar")));
+                options.AddPolicy("Ler", policy => policy.Requirements.Add(new ClaimRequirement("Login", "Ler")));
             });
         }
     }

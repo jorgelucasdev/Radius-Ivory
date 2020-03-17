@@ -7,6 +7,6 @@ namespace Radius.CrossCutting.Identity.Abastraction
     {
         string Nome { get; }
         bool EstaAutenticado();
-        IEnumerable<Claim> GetClaimsIdentity();
+        IEnumerable<Claim> ObterClaimsIdentity();
     }
 }

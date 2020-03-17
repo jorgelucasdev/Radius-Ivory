@@ -53,13 +53,9 @@ namespace Radius.Application.Controllers
                     
                 }
 
-                return Resposta(userRegistration);
+                return Resposta(result);
             }
-
-            await _signInManager.SignInAsync(user, false);
-            var token = await GerarJwt(userRegistration.Email);
-
-            return Resposta(token);
+            return Resposta(result);
         }
 
         [HttpPost]

@@ -45,12 +45,6 @@ namespace Radius.Application
             // DI
             services.AddDependencyInjectionSetup();
 
-            // Swagger
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo());
-            });
-
             // Autorização
             services.AddAuthSetup(Configuration);
 
