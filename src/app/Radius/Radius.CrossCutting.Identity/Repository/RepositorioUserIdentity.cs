@@ -25,7 +25,7 @@ namespace Radius.CrossCutting.Identity.Repository
             return _accessor.HttpContext.User.Identity.IsAuthenticated;
         }
 
-        public IEnumerable<Claim> GetClaimsIdentity()
+        public IEnumerable<Claim> ObterClaimsIdentity()
         {
             return _accessor.HttpContext.User.Claims;
         }
