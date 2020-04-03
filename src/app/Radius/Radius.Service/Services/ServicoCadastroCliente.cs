@@ -1,0 +1,68 @@
+﻿using AutoMapper;
+using Radius.Application.Interfaces;
+using Radius.Service.DTOs;
+using Radius.Domain.Entities;
+using Radius.Domain.Interfaces.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace Radius.Application.Services
+{
+    public class ServicoCadastroCliente : IServicoCadastroCliente
+    {
+
+        private readonly IRepositorioCadastroCliente _repositorio;
+        private readonly IMapper _mapper;
+
+        public ServicoCadastroCliente(IRepositorioCadastroCliente repositorio, IMapper mapper)
+        {
+            _repositorio = repositorio;
+            _mapper = mapper;
+        }
+
+        public  async Task<CadastroClienteDTOCriacao> Adicionar(CadastroClienteDTOCriacao vm)
+        {
+
+            var entidade = _mapper.Map<CadastroClienteEntidade>(vm);
+            await _repositorio.Adicionar(entidade);
+
+            var vmResult = _mapper.Map<CadastroClienteDTOCriacao>(entidade);
+            return vmResult; throw new NotImplementedException();
+        }
+
+        public async Task<CadastroClienteDTOCriacao> Atualizar( CadastroClienteDTOCriacao vm)
+        {
+
+            var entidade = _mapper.Map<CadastroClienteEntidade>(vm);
+            await _repositorio.Atualizar(entidade);
+
+            var vmResult = _mapper.Map<CadastroClienteDTOCriacao>(entidade);
+            return vmResult; throw new NotImplementedException();
+        }
+
+        public async Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodos()
+        {
+            var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.BuscarTodos());
+            return vmLista;
+        }
+
+        public async Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodosComCondicao()
+        {
+            var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.BuscarTodosComCondicao(x => x.EstaAtivo));
+                return vmLista;
+        }
+
+        public async Task<bool> Remover(Guid Id)
+        {
+            return await _repositorio.Deletar(Id);
+        }
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
+
+       
+    }
+}
