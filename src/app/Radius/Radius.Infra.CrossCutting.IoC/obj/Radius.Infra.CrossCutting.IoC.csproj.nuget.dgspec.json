@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {}
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
         "projectName": "Radius.Infra.CrossCutting.IoC",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

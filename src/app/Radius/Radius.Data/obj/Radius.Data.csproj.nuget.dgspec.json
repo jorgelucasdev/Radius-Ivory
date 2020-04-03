@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {}
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
         "projectName": "Radius.Data",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +31,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
               }
             }
           }
@@ -67,17 +70,20 @@
         }
       }
     },
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
         "projectName": "Radius.Domain",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

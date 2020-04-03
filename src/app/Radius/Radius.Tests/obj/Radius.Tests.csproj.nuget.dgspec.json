@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Tests\\Radius.Tests.csproj": {}
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Tests\\Radius.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj",
         "projectName": "Radius.Application",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,14 +31,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
               },
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj"
               },
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj"
               }
             }
           }
@@ -84,17 +87,20 @@
         }
       }
     },
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
         "projectName": "Radius.Data",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -108,8 +114,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
               }
             }
           }
@@ -147,17 +153,20 @@
         }
       }
     },
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
         "projectName": "Radius.Domain",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -200,17 +209,20 @@
         }
       }
     },
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj",
         "projectName": "Radius.Infra.CrossCutting.Bus",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -253,17 +265,20 @@
         }
       }
     },
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
         "projectName": "Radius.Infra.CrossCutting.IoC",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\Radius.Infra.CrossCutting.IoC.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.IoC\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -306,17 +321,20 @@
         }
       }
     },
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj",
         "projectName": "Radius.Service",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -330,14 +348,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj"
               },
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
               },
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Infra.CrossCutting.Bus\\Radius.Infra.CrossCutting.Bus.csproj"
               }
             }
           }
@@ -386,17 +404,20 @@
         }
       }
     },
-    "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Tests\\Radius.Tests.csproj": {
+    "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Tests\\Radius.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Tests\\Radius.Tests.csproj",
+        "projectUniqueName": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Tests\\Radius.Tests.csproj",
         "projectName": "Radius.Tests",
-        "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Tests\\Radius.Tests.csproj",
-        "packagesPath": "C:\\Users\\igorw\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Tests\\obj\\",
+        "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Tests\\Radius.Tests.csproj",
+        "packagesPath": "C:\\Users\\jorge\\.nuget\\packages\\",
+        "outputPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Tests\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\igorw\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jorge\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -410,17 +431,17 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Application\\Radius.Application.csproj"
               },
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Data\\Radius.Data.csproj"
               },
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Domain\\Radius.Domain.csproj"
               },
-              "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj": {
-                "projectPath": "C:\\Users\\igorw\\Documents\\GitHub\\Radius-Ivory\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj"
+              "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj": {
+                "projectPath": "C:\\Repositorios\\Radius-IvoryBackEnd\\src\\app\\Radius\\Radius.Service\\Radius.Service.csproj"
               }
             }
           }
