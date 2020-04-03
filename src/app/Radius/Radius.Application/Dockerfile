@@ -1,16 +1,18 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-#Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
-#For more information, please see https://aka.ms/containercompat
-
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-nanoserver-1903 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1-nanoserver-1903 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["Radius.Application/Radius.Application.csproj", "Radius.Application/"]
+COPY ["Radius.Service/Radius.Service.csproj", "Radius.Service/"]
+COPY ["Radius.Domain/Radius.Domain.csproj", "Radius.Domain/"]
+COPY ["Radius.Infra.CrossCutting.Bus/Radius.Infra.CrossCutting.Bus.csproj", "Radius.Infra.CrossCutting.Bus/"]
+COPY ["Radius.Data/Radius.Data.csproj", "Radius.Data/"]
+COPY ["Radius.Infra.CrossCutting.IoC/Radius.Infra.CrossCutting.IoC.csproj", "Radius.Infra.CrossCutting.IoC/"]
 RUN dotnet restore "Radius.Application/Radius.Application.csproj"
 COPY . .
 WORKDIR "/src/Radius.Application"

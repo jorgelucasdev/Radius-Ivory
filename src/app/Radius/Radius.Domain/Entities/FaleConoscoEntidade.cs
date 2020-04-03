@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Radius.Domain.Entities
+﻿namespace Radius.Domain.Entities
 {
     public class FaleConoscoEntidade : BaseEntidade
     {
         public string Nome
         {
-            get { return this.Nome; }
-            set { ConfigurarNome(value); }
+            get; private set;
         }
 
         private void ConfigurarNome(string nome)
@@ -19,8 +14,7 @@ namespace Radius.Domain.Entities
 
         public string Email
         {
-            get { return this.Email; }
-            set { ConfigurarEmail(value); }
+            get; private set;
         }
 
         private void ConfigurarEmail(string email)
@@ -30,8 +24,7 @@ namespace Radius.Domain.Entities
 
         public string NomeEmpresa
         {
-            get { return this.Nome; }
-            set { ConfigurarNomeEmpresa(value); }
+            get; private set;
         }
 
         private void ConfigurarNomeEmpresa(string nomeEmpresa)
@@ -41,8 +34,7 @@ namespace Radius.Domain.Entities
 
         public string Assunto
         {
-            get { return this.Assunto; }
-            set { ConfigurarAssunto(value); }
+            get; private set;
         }
 
         private void ConfigurarAssunto(string assunto)
@@ -52,13 +44,17 @@ namespace Radius.Domain.Entities
 
         public string Mensagem
         {
-            get { return this.Mensagem; }
-            set { ConfigurarMensagem(value); }
+            get; private set;
         }
 
         private void ConfigurarMensagem(string mensagem)
         {
             this.Mensagem = mensagem;
+        }
+
+        public override bool Validar()
+        {
+            return true;
         }
     }
 }
