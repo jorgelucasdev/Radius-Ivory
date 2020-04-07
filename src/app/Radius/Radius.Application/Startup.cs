@@ -1,18 +1,29 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Radius.Application.Configurations;
-using Radius.Application.Extensions;
 
 namespace Radius.Application
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IHostEnvironment env)
         {
-            Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+               .SetBasePath(env.ContentRootPath)
+               .AddJsonFile("appsettings.json", true, true)
+               .AddJsonFile($"appsettings.{env.EnvironmentName}.json", true);
+
+            if (env.IsDevelopment())
+            {
+                builder.AddUserSecrets<Startup>();
+            }
+
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
         }
 
         public IConfiguration Configuration { get; }
@@ -21,24 +32,27 @@ namespace Radius.Application
         {
             // DB
             services.AddDatabaseSetup(Configuration);
-            
+
             // WebAPI
             services.AddControllers();
 
             // AutoMapper
             services.AddAutoMapperSetup();
-            
+
             // Swagger
             services.AddSwaggerSetup();
-            
+
             // DI
             services.AddDependencyInjectionSetup();
 
-            // Swagger
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo());
-            });
+            // Autorização
+            services.AddAuthSetup(Configuration);
+
+            // Identity Configurações & JWT
+            services.AddIdentitySetup(Configuration);
+
+            // HttpContext Dependencia
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
