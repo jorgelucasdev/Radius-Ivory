@@ -14,7 +14,7 @@ namespace Radius.Application.Extensions
 
             //services.AddDbContext<RadiusContext>(options =>
             //    options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
-            
+
             services.AddDbContext<RadiusContext>(opt => opt.UseInMemoryDatabase(databaseName: "RadiusDb"));
         }
     }

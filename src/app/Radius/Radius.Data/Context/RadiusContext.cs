@@ -12,9 +12,13 @@ namespace Radius.Data.Context
 
         public DbSet<FaleConoscoEntidade> FaleConosco { get; set; }
 
+        public DbSet<FuncionarioEntidade> Funcionario { get;set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new FaleConoscoMap());
+
+            modelBuilder.ApplyConfiguration(new FuncionarioMap());
 
             base.OnModelCreating(modelBuilder);
         }
