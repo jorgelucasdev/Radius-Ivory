@@ -10,28 +10,21 @@ namespace Radius.Service.DTOs
         [Key]
         public Guid Id { get; set; }
 
-        [Required(ErrorMessage ="O Campo {0} é obrigatório")]
-        public string CNPJ { get; set; }
-
 
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
         public string RazaoSocial { get; set; }
+
 
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
         public string NomeFantasia { get; set; }
 
 
-        [Required(ErrorMessage = "O Campo {0} é obrigatório")]
-        public string Endereco { get; set; }
+        [Required(ErrorMessage ="O Campo {0} é obrigatório")]
+        [StringLength(14, ErrorMessage = "O campo {0} precisa ter {1} caracteres", MinimumLength = 14)]
+        public string CNPJ { get; set; }
 
 
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
-        [DataType(DataType.PostalCode)]
-        public string CEP { get; set; }
-
-
-        [Required(ErrorMessage = "O Campo {0} é obrigatório")]
-        [DataType(DataType.PhoneNumber)]
         public string Telefone { get; set; }
 
 
@@ -49,5 +42,7 @@ namespace Radius.Service.DTOs
         [DataType(DataType.Date)]
         public DateTime? DataEncerramento { get; set; }
 
+
+        public EnderecoDTO Endereco { get; set; }
     }
 }

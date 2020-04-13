@@ -9,6 +9,10 @@ namespace Radius.Service.AutoMappers
         public DomainToViewModelMappingProfile()
         {
             CreateMap<FaleConoscoEntidade, FaleConoscoDTOCriacao>();
+
+            CreateMap<CadastroClienteEntidade, CadastroClienteDTOCriacao>();
+
+            CreateMap<EnderecoEntidade, EnderecoDTO>();
         }
     }
 }

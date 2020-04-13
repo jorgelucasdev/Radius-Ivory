@@ -13,15 +13,20 @@ namespace Radius.Application.Services
     {
 
         private readonly IRepositorioCadastroCliente _repositorio;
+        private readonly IRepositorioEndereco _repositorioEndereco;
+
         private readonly IMapper _mapper;
 
-        public ServicoCadastroCliente(IRepositorioCadastroCliente repositorio, IMapper mapper)
+        public ServicoCadastroCliente(IRepositorioCadastroCliente repositorio,
+                                      IRepositorioEndereco repositorioEndereco,
+                                      IMapper mapper)
         {
             _repositorio = repositorio;
+            _repositorioEndereco = repositorioEndereco;
             _mapper = mapper;
         }
 
-        public  async Task<CadastroClienteDTOCriacao> Adicionar(CadastroClienteDTOCriacao vm)
+        public async Task<CadastroClienteDTOCriacao> Adicionar(CadastroClienteDTOCriacao vm)
         {
 
             var entidade = _mapper.Map<CadastroClienteEntidade>(vm);
@@ -31,7 +36,7 @@ namespace Radius.Application.Services
             return vmResult; throw new NotImplementedException();
         }
 
-        public async Task<CadastroClienteDTOCriacao> Atualizar( CadastroClienteDTOCriacao vm)
+        public async Task<CadastroClienteDTOCriacao> Atualizar(CadastroClienteDTOCriacao vm)
         {
 
             var entidade = _mapper.Map<CadastroClienteEntidade>(vm);
@@ -50,7 +55,7 @@ namespace Radius.Application.Services
         public async Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodosComCondicao()
         {
             var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.BuscarTodosComCondicao(x => x.EstaAtivo));
-                return vmLista;
+            return vmLista;
         }
 
         public async Task<bool> Remover(Guid Id)
@@ -61,8 +66,9 @@ namespace Radius.Application.Services
         public void Dispose()
         {
             GC.SuppressFinalize(this);
+            GC.SuppressFinalize(_repositorioEndereco);
         }
 
-       
+
     }
 }

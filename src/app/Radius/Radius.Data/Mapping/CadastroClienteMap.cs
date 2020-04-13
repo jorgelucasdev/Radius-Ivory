@@ -14,23 +14,15 @@ namespace Radius.Data.Mapping
 
             builder.HasKey(p => p.Id);
 
-            builder.Property(p => p.Id)
-                .IsRequired(true);
-
-            builder.Property(p => p.CNPJ).HasMaxLength(14)
-                .IsRequired();
-
             builder.Property(p => p.RazaoSocial)
                 .IsRequired();
 
             builder.Property(p => p.NomeFantasia)
                 .IsRequired();
 
-            builder.Property(p => p.Endereco)
+            builder.Property(p => p.CNPJ).HasMaxLength(14)
                 .IsRequired();
 
-            builder.Property(p => p.CEP)
-                .IsRequired();
 
             builder.Property(p => p.Telefone)
                .IsRequired();
@@ -38,16 +30,17 @@ namespace Radius.Data.Mapping
             builder.Property(p => p.Email)
                .IsRequired();
 
-            builder.Property(p => p.EstaAtivo)
-                .IsRequired();
-
             builder.Property(p => p.DataCadastro)
                 .IsRequired();
 
-            builder.Property(p => p.DataCriacao)
+            builder.Property(p => p.DataEncerramento)
                 .IsRequired();
 
+            builder.Property(p => p.EstaAtivo)
+                .IsRequired();
 
+            builder.HasOne(f => f.Endereco)
+               .WithOne(e => e.Cliente);
         }
     }
 }

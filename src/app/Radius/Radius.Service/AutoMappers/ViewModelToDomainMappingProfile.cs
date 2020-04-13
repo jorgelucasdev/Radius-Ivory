@@ -8,7 +8,12 @@ namespace Radius.Service.AutoMappers
     {
         public ViewModelToDomainMappingProfile()
         {
+
             CreateMap<FaleConoscoDTOCriacao, FaleConoscoEntidade>();
+
+            CreateMap<CadastroClienteDTOCriacao, CadastroClienteEntidade>();
+
+            CreateMap<EnderecoDTO, EnderecoEntidade>();
         }
     }
 }
