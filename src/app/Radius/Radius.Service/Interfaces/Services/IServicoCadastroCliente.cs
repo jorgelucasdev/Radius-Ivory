@@ -14,6 +14,8 @@ namespace Radius.Application.Interfaces
 
         Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodos();
 
+       //Task<IEnumerable<CadastroClienteDTOCriacao>> ListarPorId(Guid id);
+
         Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodosComCondicao();
 
         Task<bool> Remover(Guid id);

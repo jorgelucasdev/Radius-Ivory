@@ -58,6 +58,12 @@ namespace Radius.Application.Services
             return vmLista;
         }
 
+        //public async Task<IEnumerable<CadastroClienteDTOCriacao>> ListarPorId(Guid id)
+        //{
+        //    var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.ObterEndereco(id));
+        //    return vmLista;
+        //}
+
         public async Task<bool> Remover(Guid Id)
         {
             return await _repositorio.Deletar(Id);

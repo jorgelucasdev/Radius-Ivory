@@ -7,6 +7,6 @@ namespace Radius.Domain.Interfaces.Repositories
 {
     public interface IRepositorioCadastroCliente : IRepositorio<CadastroClienteEntidade>
     {
-        Task<CadastroClienteEntidade> ObterEndereco(Guid Id);
+        //Task<CadastroClienteEntidade> ObterEndereco(Guid Id);
     }
 }

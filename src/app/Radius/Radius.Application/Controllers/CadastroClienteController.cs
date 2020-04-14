@@ -32,6 +32,14 @@ namespace Radius.Application.Controllers
             return Json(lista);
         }
 
+
+        //[HttpGet]
+        //public IActionResult ListarPorID(Guid Id)
+        //{
+        //    var lista = _servicoCadastroCliente.ListarPorId(Id);
+        //    return Json(lista);
+        //}
+
         [HttpPost]
         //[Authorize(Policy = "Gravar")]
         public IActionResult Adicionar (CadastroClienteDTOCriacao dTO)

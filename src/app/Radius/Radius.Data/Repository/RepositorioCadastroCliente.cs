@@ -17,14 +17,15 @@ namespace Radius.Data.Repository
         public RepositorioCadastroCliente(RadiusContext db) : base(db)
         {
             _db = db;
+            _dbSet = db.Set<CadastroClienteEntidade>();
 
         }
 
-        public async Task<CadastroClienteEntidade> ObterEndereco(Guid Id)
-        {
-            return await _dbSet.AsNoTracking()
-                .Include(c => c.Endereco)
-                .FirstOrDefaultAsync(c => c.Id == Id);
-        }
+        //public async Task<CadastroClienteEntidade> ObterEndereco(Guid Id)
+        //{
+        //    return await _dbSet.AsNoTracking()
+        //        .Include(c => c.Endereco)
+        //        .FirstOrDefaultAsync(c => c.Id == Id);
+        //}
     }
 }
