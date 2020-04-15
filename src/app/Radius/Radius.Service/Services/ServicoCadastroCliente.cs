@@ -4,6 +4,7 @@ using Radius.Service.DTOs;
 using Radius.Domain.Entities;
 using Radius.Domain.Interfaces.Repositories;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -26,9 +27,36 @@ namespace Radius.Application.Services
             _mapper = mapper;
         }
 
+
+        public async Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodos()
+        {
+            var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.BuscarTodos());
+            return vmLista;
+        }
+
+
+        public async Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodosComCondicao()
+        {
+            var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.BuscarTodosComCondicao(x => x.EstaAtivo));
+            return vmLista;
+        }
+
+
+        public async Task<CadastroClienteDTOCriacao> ListarEndereco(Guid id)
+        {
+            var vmLista = _mapper.Map<CadastroClienteDTOCriacao>(await _repositorio.ObterEndereco(id));
+            return vmLista;
+        }
+
+        public async Task<CadastroClienteDTOCriacao> ListarProjetoseEndereco(Guid id)
+        {
+            var vmLista = _mapper.Map<CadastroClienteDTOCriacao>(await _repositorio.ObterProjetoseEndereco(id));
+            return vmLista;
+        }
+
+
         public async Task<CadastroClienteDTOCriacao> Adicionar(CadastroClienteDTOCriacao vm)
         {
-
             var entidade = _mapper.Map<CadastroClienteEntidade>(vm);
             await _repositorio.Adicionar(entidade);
 
@@ -46,35 +74,28 @@ namespace Radius.Application.Services
             return vmResult; throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodos()
-        {
-            var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.BuscarTodos());
-            return vmLista;
-        }
-
-        public async Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodosComCondicao()
-        {
-            var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.BuscarTodosComCondicao(x => x.EstaAtivo));
-            return vmLista;
-        }
-
-        //public async Task<IEnumerable<CadastroClienteDTOCriacao>> ListarPorId(Guid id)
-        //{
-        //    var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.ObterEndereco(id));
-        //    return vmLista;
-        //}
 
         public async Task<bool> Remover(Guid Id)
         {
             return await _repositorio.Deletar(Id);
         }
 
+        public async Task<EnderecoDTO> AtualizarEndereco(EnderecoDTO vs)
+        {
+
+            var entidade = _mapper.Map<EnderecoEntidade>(vs);
+            await _repositorioEndereco.Atualizar(entidade);
+
+            var vmResult = _mapper.Map<EnderecoDTO>(entidade);
+            return vmResult; throw new NotImplementedException();
+        }
+
+
         public void Dispose()
         {
             GC.SuppressFinalize(this);
             GC.SuppressFinalize(_repositorioEndereco);
         }
-
 
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Flunt.Notifications;
 using Flunt.Validations;
 
@@ -100,11 +101,12 @@ namespace Radius.Domain.Entities
                      .IsNotNullOrEmpty(Email, "Email", "É obrigatório o preenchimento do Email.")
                      .IsNull(DataCadastro, "DataCadastro", "É obrigatório o preenchimento da DataCadastro.")
                      .IsNull(DataEncerramento, "DataEncerramento", "É obrigatório o preenchimento da DataEncerramento.")
-                     //.IsNull(Endereco, "Endereco", "É obrigatório o preenchimento do Endereco.")
-
-
              );
         }
+
+
+        /* EF Relacioanamento*/
+        public IEnumerable<ProjetoEntidade> Projetos { get; set; }
     }
 
 }

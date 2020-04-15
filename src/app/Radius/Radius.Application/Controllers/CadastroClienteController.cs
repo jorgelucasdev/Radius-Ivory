@@ -32,17 +32,23 @@ namespace Radius.Application.Controllers
             return Json(lista);
         }
 
+        [HttpGet]
+        public IActionResult ListarEnderecoCliente(Guid id)
+        {
+            var lista = _servicoCadastroCliente.ListarEndereco(id);
+            return Json(lista);
+        }
 
-        //[HttpGet]
-        //public IActionResult ListarPorID(Guid Id)
-        //{
-        //    var lista = _servicoCadastroCliente.ListarPorId(Id);
-        //    return Json(lista);
-        //}
+        [HttpGet]
+        public IActionResult ListarProjetoEnderecoCliente(Guid id)
+        {
+            var lista = _servicoCadastroCliente.ListarProjetoseEndereco(id);
+            return Json(lista);
+        }
 
         [HttpPost]
         //[Authorize(Policy = "Gravar")]
-        public IActionResult Adicionar (CadastroClienteDTOCriacao dTO)
+        public IActionResult Adicionar(CadastroClienteDTOCriacao dTO)
         {
             var result = _servicoCadastroCliente.Adicionar(dTO);
             return Json(string.Format("Format: {0}", result));

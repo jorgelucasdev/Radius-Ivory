@@ -41,6 +41,10 @@ namespace Radius.Data.Mapping
 
             builder.HasOne(f => f.Endereco)
                .WithOne(e => e.Cliente);
+
+            builder.HasMany(f => f.Projetos)
+                .WithOne(e => e.CadastroCliente)
+                .HasForeignKey(p => p.ClienteId);
         }
     }
 }

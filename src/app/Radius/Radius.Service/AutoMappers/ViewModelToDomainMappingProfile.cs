@@ -14,6 +14,8 @@ namespace Radius.Service.AutoMappers
             CreateMap<CadastroClienteDTOCriacao, CadastroClienteEntidade>();
 
             CreateMap<EnderecoDTO, EnderecoEntidade>();
+
+            CreateMap<ProjetoDTOCriacao, ProjetoEntidade>();
         }
     }
 }

@@ -8,18 +8,21 @@ namespace Radius.Application.Interfaces
     public interface IServicoCadastroCliente
     {
 
+        Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodos();
+
+        Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodosComCondicao();
+
+        Task<CadastroClienteDTOCriacao> ListarEndereco(Guid id);
+
+        Task<CadastroClienteDTOCriacao> ListarProjetoseEndereco(Guid id);
+
         Task<CadastroClienteDTOCriacao> Adicionar(CadastroClienteDTOCriacao vm);
 
         Task<CadastroClienteDTOCriacao> Atualizar (CadastroClienteDTOCriacao vm);
 
-        Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodos();
-
-       //Task<IEnumerable<CadastroClienteDTOCriacao>> ListarPorId(Guid id);
-
-        Task<IEnumerable<CadastroClienteDTOCriacao>> ListarTodosComCondicao();
-
         Task<bool> Remover(Guid id);
 
+        Task<EnderecoDTO> AtualizarEndereco(EnderecoDTO vs);
 
 
     }

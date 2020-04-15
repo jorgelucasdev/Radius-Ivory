@@ -21,11 +21,19 @@ namespace Radius.Data.Repository
 
         }
 
-        //public async Task<CadastroClienteEntidade> ObterEndereco(Guid Id)
-        //{
-        //    return await _dbSet.AsNoTracking()
-        //        .Include(c => c.Endereco)
-        //        .FirstOrDefaultAsync(c => c.Id == Id);
-        //}
+        public async Task<CadastroClienteEntidade> ObterEndereco(Guid Id)
+        {
+            return await _dbSet.AsNoTracking()
+                .Include(c => c.Endereco)
+                .FirstOrDefaultAsync(c => c.Id == Id);
+        }
+
+        public async Task<CadastroClienteEntidade> ObterProjetoseEndereco(Guid Id)
+        {
+            return await _dbSet.AsNoTracking()
+                .Include(c => c.Endereco)
+                .Include(c=> c.Projetos)
+                .FirstOrDefaultAsync(c => c.Id == Id);
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using Flunt.Notifications;
 using Flunt.Validations;
@@ -44,5 +45,9 @@ namespace Radius.Service.DTOs
 
 
         public EnderecoDTO Endereco { get; set; }
+
+
+        /* Relacionamento*/
+        public IEnumerable<ProjetoDTOCriacao> Projetos { get; set; }
     }
 }
