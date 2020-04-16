@@ -33,16 +33,9 @@ namespace Radius.Application.Controllers
         }
 
         [HttpGet]
-        public IActionResult ListarEnderecoCliente(Guid id)
+        public IActionResult ListarPorId(Guid id)
         {
-            var lista = _servicoCadastroCliente.ListarEndereco(id);
-            return Json(lista);
-        }
-
-        [HttpGet]
-        public IActionResult ListarProjetoEnderecoCliente(Guid id)
-        {
-            var lista = _servicoCadastroCliente.ListarProjetoseEndereco(id);
+            var lista = _servicoCadastroCliente.ListarPorId(id);
             return Json(lista);
         }
 

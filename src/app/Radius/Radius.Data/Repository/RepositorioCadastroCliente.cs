@@ -21,14 +21,14 @@ namespace Radius.Data.Repository
 
         }
 
-        public async Task<CadastroClienteEntidade> ObterEndereco(Guid Id)
+        public async Task<CadastroClienteEntidade> ObterEnderecoCliente(Guid Id)
         {
             return await _dbSet.AsNoTracking()
                 .Include(c => c.Endereco)
                 .FirstOrDefaultAsync(c => c.Id == Id);
         }
 
-        public async Task<CadastroClienteEntidade> ObterProjetoseEndereco(Guid Id)
+        public async Task<CadastroClienteEntidade> ObterProjetoseEnderecoCliente(Guid Id)
         {
             return await _dbSet.AsNoTracking()
                 .Include(c => c.Endereco)

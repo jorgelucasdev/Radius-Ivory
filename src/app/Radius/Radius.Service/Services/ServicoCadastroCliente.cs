@@ -44,19 +44,25 @@ namespace Radius.Application.Services
 
         public async Task<CadastroClienteDTOCriacao> ListarEndereco(Guid id)
         {
-            var vmLista = _mapper.Map<CadastroClienteDTOCriacao>(await _repositorio.ObterEndereco(id));
+            var vmLista = _mapper.Map<CadastroClienteDTOCriacao>(await _repositorio.ObterEnderecoCliente(id));
             return vmLista;
         }
 
-        public async Task<CadastroClienteDTOCriacao> ListarProjetoseEndereco(Guid id)
+        public async Task<CadastroClienteDTOCriacao> ListarPorId(Guid id)
         {
-            var vmLista = _mapper.Map<CadastroClienteDTOCriacao>(await _repositorio.ObterProjetoseEndereco(id));
+            var vmLista = _mapper.Map<CadastroClienteDTOCriacao>(await _repositorio.ObterProjetoseEnderecoCliente(id));
             return vmLista;
         }
 
 
         public async Task<CadastroClienteDTOCriacao> Adicionar(CadastroClienteDTOCriacao vm)
         {
+
+            if (_repositorio.BuscarTodosComCondicao(f => f.CNPJ == vm.CNPJ).Result.Any())
+            {
+                throw new NotImplementedException("Já existe um cliente cadastrado com esse CNPJ.");
+            }
+
             var entidade = _mapper.Map<CadastroClienteEntidade>(vm);
             await _repositorio.Adicionar(entidade);
 
@@ -77,6 +83,11 @@ namespace Radius.Application.Services
 
         public async Task<bool> Remover(Guid Id)
         {
+            if (_repositorio.ObterProjetoseEnderecoCliente(Id).Result.Projetos.Any())
+            {
+                throw new NotImplementedException("O cliente possui projetos cadastrados!");
+            }
+
             return await _repositorio.Deletar(Id);
         }
 

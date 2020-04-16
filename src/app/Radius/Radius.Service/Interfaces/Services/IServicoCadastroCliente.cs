@@ -14,7 +14,7 @@ namespace Radius.Application.Interfaces
 
         Task<CadastroClienteDTOCriacao> ListarEndereco(Guid id);
 
-        Task<CadastroClienteDTOCriacao> ListarProjetoseEndereco(Guid id);
+        Task<CadastroClienteDTOCriacao> ListarPorId(Guid id);
 
         Task<CadastroClienteDTOCriacao> Adicionar(CadastroClienteDTOCriacao vm);
 
