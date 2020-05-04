@@ -6,6 +6,7 @@ using Radius.Domain.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Radius.Application.Services
 {
@@ -43,6 +44,42 @@ namespace Radius.Application.Services
             return vmResult; throw new NotImplementedException();
         }
 
+        public async Task<IEnumerable<ProjetoDTOCriacao>> Buscar(FiltroProjetoDTO filtro)
+        {
+            var vmLista = _mapper.Map<IEnumerable<ProjetoDTOCriacao>>(await _repositorio.BuscarTodosComCondicao(x => x.EstaAtivo));
+
+            if (filtro != null)
+            {
+                if (!string.IsNullOrEmpty(filtro.Empresa))
+                {
+                    vmLista = vmLista.Where(x => x.Empresa.ToUpper() == filtro.Empresa.ToUpper());
+                }
+
+                if (!string.IsNullOrEmpty(filtro.CNPJ))
+                {
+                    vmLista = vmLista.Where(x => x.CNPJ == filtro.CNPJ);
+                }
+
+                if (!string.IsNullOrEmpty(filtro.NomeProjeto))
+                {
+                    vmLista = vmLista.Where(x => x.NomeProjeto.ToUpper() == filtro.NomeProjeto.ToUpper());
+                }
+
+                if (filtro.PeriodoCadastro != null)
+                {
+                    vmLista = vmLista.Where(x => x.DataInicio == filtro.PeriodoCadastro);
+                }
+
+                if (filtro.PeriodoEncerramento != null)
+                {
+                    vmLista = vmLista.Where(x => x.DataTermino == filtro.PeriodoEncerramento);
+                }
+            }
+
+            return vmLista;
+        }
+
+
         public async Task<IEnumerable<ProjetoDTOCriacao>> ListarTodos()
         {
             var vmLista = _mapper.Map<IEnumerable<ProjetoDTOCriacao>>(await _repositorio.BuscarTodos());
@@ -64,7 +101,6 @@ namespace Radius.Application.Services
         {
             GC.SuppressFinalize(this);
         }
-
 
     }
 }

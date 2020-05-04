@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Radius.Application.Interfaces;
 using Radius.Service.DTOs;
 using System;
-
+using System.Linq;
 
 namespace Radius.Application.Controllers
 {
@@ -32,6 +32,14 @@ namespace Radius.Application.Controllers
             return Json(lista);
         }
 
+        [HttpGet]
+        public IActionResult FiltrarResultados([FromQuery] FiltroProjetoDTO filtro)
+        {
+            var lista = _servicoProjeto.Buscar(filtro);
+
+            return Json(lista);
+        }
+
         [HttpPost]
         //[Authorize(Policy = "Gravar")]
         public IActionResult Adicionar(ProjetoDTOCriacao dTO)
@@ -53,5 +61,6 @@ namespace Radius.Application.Controllers
             var result = _servicoProjeto.Remover(Id);
             return Json(string.Format("Format: {0}", result));
         }
+
     }
 }
