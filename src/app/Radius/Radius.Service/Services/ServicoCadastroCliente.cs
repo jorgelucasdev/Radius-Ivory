@@ -54,6 +54,30 @@ namespace Radius.Application.Services
             return vmLista;
         }
 
+        public async Task<IEnumerable<CadastroClienteDTOCriacao>> Buscar(FiltroClienteDTO filtro)
+        {
+            var vmLista = _mapper.Map<IEnumerable<CadastroClienteDTOCriacao>>(await _repositorio.BuscarTodosComCondicao(x => x.EstaAtivo));
+
+            if (filtro != null)
+            {
+                if (!string.IsNullOrEmpty(filtro.ClienteNome))
+                {
+                    vmLista = vmLista.Where(x => x.RazaoSocial.ToUpper() == filtro.ClienteNome.ToUpper());
+                }
+
+                if (filtro.PeriodoCadastro != null)
+                {
+                    vmLista = vmLista.Where(x => x.DataCadastro == filtro.PeriodoCadastro);
+                }
+
+                if (filtro.PeriodoEncerramento != null)
+                {
+                    vmLista = vmLista.Where(x => x.DataEncerramento == filtro.PeriodoEncerramento);
+                }
+            }
+
+            return vmLista;
+        }
 
         public async Task<CadastroClienteDTOCriacao> Adicionar(CadastroClienteDTOCriacao vm)
         {

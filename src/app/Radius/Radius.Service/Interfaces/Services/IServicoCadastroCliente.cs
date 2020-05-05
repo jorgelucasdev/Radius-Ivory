@@ -16,9 +16,11 @@ namespace Radius.Application.Interfaces
 
         Task<CadastroClienteDTOCriacao> ListarPorId(Guid id);
 
+        Task<IEnumerable<CadastroClienteDTOCriacao>> Buscar(FiltroClienteDTO filtro);
+
         Task<CadastroClienteDTOCriacao> Adicionar(CadastroClienteDTOCriacao vm);
 
-        Task<CadastroClienteDTOCriacao> Atualizar (CadastroClienteDTOCriacao vm);
+        Task<CadastroClienteDTOCriacao> Atualizar(CadastroClienteDTOCriacao vm);
 
         Task<bool> Remover(Guid id);
 

@@ -39,6 +39,14 @@ namespace Radius.Application.Controllers
             return Json(lista);
         }
 
+        [HttpGet]
+        public IActionResult FiltrarResultados([FromQuery] FiltroClienteDTO filtro)
+        {
+            var lista = _servicoCadastroCliente.Buscar(filtro);
+
+            return Json(lista);
+        }
+
         [HttpPost]
         //[Authorize(Policy = "Gravar")]
         public IActionResult Adicionar(CadastroClienteDTOCriacao dTO)
