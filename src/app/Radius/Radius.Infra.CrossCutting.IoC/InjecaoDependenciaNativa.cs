@@ -24,11 +24,13 @@ namespace Radius.Infra.CrossCutting.IoC
             services.AddScoped<IRepositorioCadastroCliente, RepositorioCadastroCliente>();
             services.AddScoped<IRepositorioEndereco, RepositorioEndereco>();
             services.AddScoped<IRepositorioProjeto, RepositorioProjeto>();
+            services.AddScoped<IRepositorioUsuario, RepositorioUsuario>();
 
             //Servicos
             services.AddScoped<IServicoFaleConosco, ServicoFaleConosco>();
             services.AddScoped<IServicoCadastroCliente, ServicoCadastroCliente>();
             services.AddScoped<IServicoProjeto, ServicoProjeto>();
+            services.AddScoped<IservicoUsuario, ServicoUsuario>();
 
             // Identity
             services.AddScoped<IUserIdentity, RepositorioUserIdentity>();

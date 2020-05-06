@@ -2,7 +2,7 @@
 
 namespace Radius.Domain.Interfaces.Repositories
 {
-    public interface IRepositorioProjeto : IRepositorio<ProjetoEntidade>
+    public interface IRepositorioUsuario : IRepositorio<UsuarioEntidade>
     {
     }
 }

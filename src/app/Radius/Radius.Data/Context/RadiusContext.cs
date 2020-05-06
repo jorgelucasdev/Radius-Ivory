@@ -16,6 +16,7 @@ namespace Radius.Data.Context
         public DbSet<CadastroClienteEntidade> CadastroCliente { get; set; }
         public DbSet<EnderecoEntidade> Endereco { get; set; }
         public DbSet<ProjetoEntidade> Projetos { get; set; }
+        public DbSet<UsuarioEntidade> Usuario { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -27,6 +28,8 @@ namespace Radius.Data.Context
             modelBuilder.ApplyConfiguration(new EnderecoMap());
 
             modelBuilder.ApplyConfiguration(new ProjetoMap());
+
+            modelBuilder.ApplyConfiguration(new UsuarioMap());
 
 
 
