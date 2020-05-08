@@ -26,6 +26,7 @@ namespace Radius.Service.DTOs
 
 
         [Required(ErrorMessage = "O Campo {0} é obrigatório")]
+        [RegularExpression("^[(][1-9]{2}[)](?:[2-8]|9[1-9])[0-9]{3}[-][0-9]{4}$", ErrorMessage = "O campo {0} foi preenchido em formato incorreto, preencha o campo no formato: (00)1234-5678 ou (00)12345-6789")]
         public string Telefone { get; set; }
 
 

@@ -26,11 +26,15 @@ namespace Radius.Application.Services
 
         public async Task<UsuarioDTOCriacao> Adicionar(UsuarioDTOCriacao vm)
         {
-            if(vm.Celular == "" && vm.Telefone == "")
+            if (!string.IsNullOrWhiteSpace(vm.Celular) && !string.IsNullOrWhiteSpace(vm.Telefone))
             {
                 throw new NotImplementedException("Entre os campos Celular e Telefone, pelo menos um tem que estar preenchido.");
             }
 
+            if (_repositorio.BuscarTodosComCondicao(f => f.CPF == vm.CPF).Result.Any())
+            {
+                throw new NotImplementedException("Já existe um usuario cadastrado com esse CPF.");
+            }
             var entidade = _mapper.Map<UsuarioEntidade>(vm);
             await _repositorio.Adicionar(entidade);
 
